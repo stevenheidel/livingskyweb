@@ -1,3 +1,4 @@
+<% if logged_in? -%>
 <!DOCTYPE html>
 <html>
   <%= render :partial => 'shared/head' %>
@@ -7,7 +8,7 @@
       <%= render :partial => 'shared/header' %>
       <section>
         <div id="content_in">
-          <%= render :partial => 'shared/content_page' %>
+          <%= yield %>
         </div>
         <div id="cont_bottom"></div> 
       </section>
@@ -16,3 +17,32 @@
     </div>
   </body>
 </html>
+<% else -%>
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Undergoing Maintenance</title>
+  <style type="text/css"> 
+    body{font-size: 75%;font-family: Helvetica,Arial,sans-serif;color:#333;background:#FDFDFD;}
+    .container{font-size:1.1em;width:700px;text-align:center;margin:80px auto;}
+    .message{background:#FFF;border:1px solid #EEE;padding:30px;}
+    h1{margin:0 0 0.5em;font-weight:normal;}
+    p{margin:0;line-height:1.75em;}
+    .foot{color:#999;margin-top:30px}
+    .foot a{color:#666;text-decoration:none}
+  </style> 
+</head>
+<body> 
+  <div class="container"> 
+    <div class="message"> 
+      <h1>Living Sky Web Development is in the process of launching a new site, please check back later</h1>
+      <p>The new site will be available before September 1st, 2010. Thank you for your interest.</p>
+    </div> 
+    <div class="foot">
+      <h1>steven -at- livingskyweb.ca</h1>
+      <p><a href="http://livingskyweb.ca/">http://livingskyweb.ca/</a></p>
+    </div>
+  </div> 
+</body>
+</html>
+<% end -%>
