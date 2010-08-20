@@ -2,6 +2,7 @@
 <html>
   <%= render :partial => 'shared/head' %>
   <body>
+    <%= render :partial => 'shared/site_bar' if logged_in? %>
     <div id="container">
       <%= render :partial => 'shared/header' %>
       <section>

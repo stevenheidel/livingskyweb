@@ -1,0 +1,25 @@
+<% content_for :body_content_title do %>
+  Welcome to <span>Living Sky</span> Web Development
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><span class="alleft">Recent Work</span> <span class="alright"><a href="#">view all</a></span></h2>
+  <div class="work">
+    <%= image_tag 'right-img.jpg', :class => 'alright', :theme => true %>
+    <h3><a href="#">CYA Election Site</a></h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br /><a href="#">Read more...</a></p>
+  </div>
+  <div class="work">
+    <%= image_tag 'right-img.jpg', :class => 'alright', :theme => true %>
+    <h3><a href="#">CYA Election Site</a></h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br /><a href="#">Read more...</a></p>
+  </div>
+  <div class="work_last">
+    <%= image_tag 'right-img.jpg', :class => 'alright', :theme => true %>
+    <h3><a href="#">CYA Election Site</a></h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br /><a href="#">Read more...</a></p>
+  </div>
+  <div id="right_bottom"></div>
+<% end %>
+
+<%= render :partial => 'shared/content_page' %>

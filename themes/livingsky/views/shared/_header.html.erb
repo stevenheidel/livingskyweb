@@ -1,11 +1,11 @@
 <!--HEADER-->
       <header>
         <div id="logo">
-          <a href="#"><%= image_tag 'logo.png', :theme => true %></a>
+          <%= link_to image_tag('logo.png', :theme => true), root_url %>
         </div>
         <%= render :partial => 'shared/menu' %>
         <div id="rss">
-          <a href="#"><%= image_tag 'rss-icon.png', :theme => true %></a>
+          <%= link_to image_tag('rss-icon.png', :theme => true), "#" %>
         </div>
-        <div id="banner"><%= image_tag 'banner.jpg', :theme => true%></div>
+        <div id="banner"><%= image_tag 'banner.jpg', :theme => true %></div>
       </header>
