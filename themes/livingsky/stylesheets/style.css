@@ -51,6 +51,9 @@ header nav a {
 	margin-right: 10px;
 	float: left;
 }
+header nav a.selected {
+  color: #77b428;
+}
 header nav a:hover {
 	color: #77b428;
 	background: url(/theme/images/menu-hover.gif) top center no-repeat;

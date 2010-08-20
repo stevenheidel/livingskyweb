@@ -1,9 +1,7 @@
 <!--MENU-->
         <nav>
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Portofolio</a>
-          <a href="#">Contact Us</a>
-          <a href="#">Blog</a>
+        <% @menu_pages.each do |menu_branch| -%>
+          <% selected = selected_page?(menu_branch) or descendant_page_selected?(menu_branch) -%>
+          <%= link_to menu_branch.title, menu_branch.url, :class => selected ? 'selected' : nil %>
+        <% end -%>
         </nav>
