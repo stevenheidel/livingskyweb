@@ -1,7 +1,6 @@
-<!--MENU-->
-        <nav>
-        <% @menu_pages.each do |menu_branch| -%>
-          <%= link_to menu_branch.title, menu_branch.url, :class => 
-                      (selected_page?(menu_branch) or descendant_page_selected?(menu_branch)) ? 'selected' : nil %>
-        <% end -%>
-        </nav>
+<nav>
+<% @menu_pages.each do |menu_branch| -%>
+  <%= link_to menu_branch.title, menu_branch.url, :class => 
+              (selected_page?(menu_branch) or descendant_page_selected?(menu_branch)) ? 'selected' : nil %>
+<% end -%>
+</nav>

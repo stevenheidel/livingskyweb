@@ -1,8 +1,7 @@
-<!--CONTENT-->
-          <article id="left">
-            <h1><%= (yield :body_content_title) || @page.title %></h1>
-            <%= (yield :body_content_left) || @page[:body]%>
-          </article>
-          <article id="right">
-            <%= (yield :body_content_right) || @page[:side_body] %>         	
-          </article>
+<article id="left">
+  <h1><%= (yield :body_content_title) || @page.title %></h1>
+  <%= (yield :body_content_left) || @page[:body]%>
+</article>
+<article id="right">
+  <%= (yield :body_content_right) || @page[:side_body] %>         	
+</article>
