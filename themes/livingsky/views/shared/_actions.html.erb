@@ -1,33 +1,32 @@
-<!--ACTIONS-->
-      <aside>
-        <article>
-          <div class="quote_top"></div>
-        	<div class="quote_in">
-            <%= image_tag 'quote-img.jpg', :class => 'alright', :theme => true %>
-            <h4>Get a Quote</h4>
-            <p>Get a 100% free no obligation quote right now!</p>
-            <a href="#"><%= image_tag 'more-btn.gif', :class => 'alleft2', :theme => true %></a>
-          </div>
-          <div class="quote_bottom"></div>
-        </article>
-        <article>
-          <div class="quote_top"></div>
-          <div class="quote_in">
-            <%= image_tag 'quote-img2.jpg', :class => 'alright', :theme => true %>
-            <h4>Testimonials</h4>
-            <p id="testimp">"I highly recommend Living Sky Web Development. They are highly professional, yet friendly and..."</p>
-            <a href="#"><%= image_tag 'more-btn.gif', :class => 'alleft2', :theme => true %></a>
-          </div>
-          <div class="quote_bottom"></div>
-        </article>
-        <article>
-          <div class="quote_top"></div>
-          <div class="quote_in">
-            <%= image_tag 'quote-img3.jpg', :class => 'alright', :theme => true %>
-            <h4>Contact us</h4>
-            <p>Get in touch with us<br />right now!</p>
-            <a href="#"><%= image_tag 'more-btn.gif', :class => 'alleft2', :theme => true %></a>
-          </div>
-          <div class="quote_bottom"></div>
-        </article>
-      </aside>
+<aside>
+  <article>
+    <div class="quote_top"></div>
+  	<div class="quote_in">
+      <%= image_tag 'quote-img.jpg', :class => 'alright', :theme => true %>
+      <h4><%= RefinerySetting.find_or_set(:action1_header, "Services") %></h4>
+      <p><%= RefinerySetting.find_or_set(:action1_text, "Learn more about our many services for designers and owners.") %></p>
+      <%= link_to image_tag('more-btn.gif', :class => 'alleft2', :theme => true), RefinerySetting.find_or_set(:action1_url, "/services") %>
+    </div>
+    <div class="quote_bottom"></div>
+  </article>
+  <article>
+    <div class="quote_top"></div>
+    <div class="quote_in">
+      <%= image_tag 'quote-img2.jpg', :class => 'alright', :theme => true %>
+      <h4><%= RefinerySetting.find_or_set(:action2_header, "Testimonials") %></h4>
+      <p class="smaller"><%= RefinerySetting.find_or_set(:action2_text, "I highly recommend Living Sky Web Development. They are highly professional, yet friendly and...") %></p>
+      <%= link_to image_tag('more-btn.gif', :class => 'alleft2', :theme => true), RefinerySetting.find_or_set(:action2_url, "/testimonials") %>
+    </div>
+    <div class="quote_bottom"></div>
+  </article>
+  <article>
+    <div class="quote_top"></div>
+    <div class="quote_in">
+      <%= image_tag 'quote-img3.jpg', :class => 'alright', :theme => true %>
+      <h4><%= RefinerySetting.find_or_set(:action3_header, "Contact") %></h4>
+      <p><%= RefinerySetting.find_or_set(:action3_text, "Get in touch with us right now!") %></p>
+      <%= link_to image_tag('more-btn.gif', :class => 'alleft2', :theme => true), RefinerySetting.find_or_set(:action2_url, "/contact") %>
+    </div>
+    <div class="quote_bottom"></div>
+  </article>
+</aside>

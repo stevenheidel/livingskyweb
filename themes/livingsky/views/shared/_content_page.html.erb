@@ -3,5 +3,5 @@
   <%= (yield :body_content_left) || @page[:body]%>
 </article>
 <article id="right">
-  <%= (yield :body_content_right) || @page[:side_body] %>         	
+  <%= (yield :body_content_right) || '<div class="work">' + @page[:side_body] + '</div>' %>
 </article>

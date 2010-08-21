@@ -275,7 +275,7 @@ aside article {
 	letter-spacing: -1px;
 	margin-top: 10px;
 }
-#testimp {
+p.smaller {
 	font-style: italic;
 	font-size: 12px;
 	line-height: 14px;
