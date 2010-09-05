@@ -15,5 +15,4 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 require 'tasks/rails'
 
-$refinery_gem_plugin_lib_paths << "#{Gem.searcher.find('refinerycms-convertor').full_gem_path}/lib" rescue nil
 require 'tasks/refinery'
